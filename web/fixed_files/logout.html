@@ -1,0 +1,12 @@
+<iframe src="https://sso.robocup.org/auth/realms/RoboCup/protocol/openid-connect/logout" frameborder="0"></iframe>
+<form method="post" action="{% url 'account_logout' %}" name="sso_logout">
+  {% csrf_token %}
+  {% if redirect_field_value %}
+  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+  {% endif %}
+</form>
+<script>
+window.onload = function(){
+  document.forms['sso_logout'].submit();
+}
+</script>
