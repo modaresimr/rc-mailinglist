@@ -1,0 +1,8 @@
+<form method="post" name="sso_confirm">
+  {% csrf_token %}
+</form>
+<script>
+window.onload = function(){
+  document.forms['sso_confirm'].submit();
+}
+</script>
