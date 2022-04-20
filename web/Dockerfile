@@ -9,3 +9,4 @@ COPY ./fixed_files/base.html /usr/lib/python3.8/site-packages/postorius/template
 COPY ./fixed_files/account-login.html /usr/lib/python3.8/site-packages/django_mailman3/templates/account/login.html
 COPY ./fixed_files/urls.py /opt/mailman-web/urls.py
 COPY ./fixed_files/navbar-brand.html /usr/lib/python3.8/site-packages/hyperkitty/templates/hyperkitty/navbar-brand.html
+COPY replace_icons.sh /opt/

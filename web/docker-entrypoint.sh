@@ -151,6 +151,6 @@ chown mailman:mailman /opt/mailman-web-data -R
 
 [[ -v DISKCACHE_PATH ]] && chown mailman:mailman "${DISKCACHE_PATH}" -R
 
-bash replace_icons.sh
+bash /opt/replace_icons.sh
 
 exec $@
