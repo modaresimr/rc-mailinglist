@@ -64,7 +64,12 @@
                         </li>
                     {% endif %}
                     {% if 'hyperkitty' in INSTALLED_APPS %}
-                        <li class="nav-item"><a href="{% url 'hk_root' %}" class="nav-link">
+                        <li class="nav-item">
+                        {% if list.fqdn_listname %}
+                                <a href="{% url 'hk_root' %}lists/{{ list.fqdn_listname }}" class="nav-link">
+                        {% else %}
+                                <a href="{% url 'hk_root' %}" class="nav-link">
+                        {% endif %}
                             <span class="fa fa-comment"></span>
                             {% trans 'Archives' %}
                         </a></li>
