@@ -31,7 +31,7 @@ Example of how a protected email is rendered:
 def HideEmail(email, name=None):
 	import re
 	pattern=r"(?!^).(?=[^@]+@)"
-	if name: return f"{{re.sub(pattern,'*',name)} <{re.sub(pattern,'*',email)}>"
+	if name: return f"{re.sub(pattern,'*',name)} <{re.sub(pattern,'*',email)}>"
 	return re.sub(pattern,'*',email)
 
 
