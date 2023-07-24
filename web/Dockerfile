@@ -1,4 +1,4 @@
-FROM maxking/mailman-web:rolling
+FROM maxking/mailman-web:latest
 COPY docker-entrypoint.sh /usr/local/bin/
 
 COPY ./fixed_files/social-login.html /usr/lib/python3.8/site-packages/allauth/templates/socialaccount/login.html
