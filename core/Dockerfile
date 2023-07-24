@@ -1,4 +1,4 @@
-FROM maxking/mailman-core:rolling
+FROM maxking/mailman-core:latest
 
 CMD ["master", "--force"]
 
