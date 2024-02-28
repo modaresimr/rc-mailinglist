@@ -13,4 +13,4 @@ COPY ./fixed_files/logout.html /usr/lib/python3.8/site-packages/django_mailman3/
 COPY replace_icons.sh /opt/
 COPY ./fixed_files/message.html /usr/lib/python3.8/site-packages/hyperkitty/templates/hyperkitty/messages/message.html
 COPY ./fixed_files/my_filter_email.py /usr/lib/python3.8/site-packages/hyperkitty/templatetags/my_filter_email.py
-RUN pip install django-allauth
+RUN pip install django-allauth django-keycloak
