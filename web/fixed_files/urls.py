@@ -16,20 +16,19 @@
 # You should have received a copy of the GNU General Public License along with
 # Postorius.  If not, see <http://www.gnu.org/licenses/>.
 
-
-from django.conf.urls import include, url
+from django.conf.urls import include
 from django.contrib import admin
-from django.urls import reverse_lazy
+from django.urls import path, reverse_lazy
 from django.views.generic import RedirectView
 
 urlpatterns = [
-    url(r'^$', RedirectView.as_view(
+    path(r'', RedirectView.as_view(
         url=reverse_lazy('list_index'),
         permanent=True)),
-    url(r'^mm/', include('postorius.urls')),
-    url(r'^archives/', include('hyperkitty.urls')),
-    url(r'', include('django_mailman3.urls')),
-    url(r'^accounts/', include('allauth.urls')),
+    path(r'mm/', include('postorius.urls')),
+    path(r'archives/', include('hyperkitty.urls')),
+    path(r'', include('django_mailman3.urls')),
+    path(r'accounts/', include('allauth.urls')),
     # Django admin
-    url(r'^djadmin/', admin.site.urls),
+    path(r'djadmin/', admin.site.urls),
 ]
